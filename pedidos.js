@@ -50,9 +50,25 @@ function listarPedidos() {
 }
 
 function buscarPedido(codigo) {
+    let pedidoAchado ={}
+    for(let pedido of pedidos){
+        if (pedido.codigo === codigo){
+            pedidoAchado = pedido
+            return pedidoAchado
+        }
+    }
+    return "pedido não encontrado!"
     // TODO: retornar o pedido correspondente ao código, se existir.
 }
 
 function entregarPedido(codigo) {
+    for(let pedido of pedidos){
+        if (pedido.codigo == codigo){
+            pedido.entregue = true
+            return console.log("pedido entregue!")
+        }
+    }
+    console.log("Pedido não encontrado!")
+
     // TODO: alterar a situação de entrega do pedido encontrado.
 }
