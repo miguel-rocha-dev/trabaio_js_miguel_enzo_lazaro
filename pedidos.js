@@ -19,7 +19,7 @@ function cadastrarPedido() {
         }
         pedidos.push(objeto)
 
-    window.alert(`Pedido criado com sucesso! ${buscarPedido(objeto.codigo)}`)
+    window.alert(`Pedido criado com sucesso!`)
     
 
 
