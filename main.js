@@ -6,8 +6,8 @@ function iniciarSistema() {
     // condicionais e chamadas às funções dos outros arquivos JavaScript.
     // Opções: 1 cadastrar; 2 listar; 3 buscar; 4 entregar;
     // 5 resumo; 6 resumo em JSON; 0 sair.
-    let opcoes = 1;
-    while (opcoes !== "0") {
+    let opcoes =0
+    while (true) {
         opcoes = Number(prompt(
             "===== LANCHONETE ===== \n" +
             "1 - Cadastrar\n" +
@@ -17,6 +17,13 @@ function iniciarSistema() {
             "5 - Resumo\n" +
             "6 - Resumo em JSON\n" +
             "0 - Sair\n\n"));
+
+        if([0,1,2,3,4,5,6].includes(opcoes)){
+            break
+        }
+        window.alert("número inválido!")
+    }
+        
 
         if(opcoes === 1){
             cadastrarPedido();
@@ -38,7 +45,7 @@ function iniciarSistema() {
         if(opcoes === 6){
             gerarResumoJSON();
         }
-    }
+    
 }
 // TODO: chamar iniciarSistema() quando a implementação estiver pronta.
 iniciarSistema()
