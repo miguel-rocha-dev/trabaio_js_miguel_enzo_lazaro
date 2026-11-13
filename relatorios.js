@@ -39,12 +39,12 @@ function gerarResumoJSON() {
         }
     }
     let resumo = {
-        totalPedidos : pedido.lenght,
+        totalPedidos : pedido.length,
         entregues : entregues,
         pendentes : pendentes,
-        valorTotal : Number(valorTotal)
+        valorTotal : valorTotal
     }
     let json = JSON.stringify(resumo);
-    console.log("=== RESUMO EM JSON");
+    console.log("=== RESUMO EM JSON ==="  );
     console.log(json);
 }
