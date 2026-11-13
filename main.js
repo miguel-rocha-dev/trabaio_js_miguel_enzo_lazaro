@@ -18,12 +18,13 @@ function iniciarSistema() {
             "6 - Resumo em JSON\n" +
             "0 - Sair\n\n"));
 
-        if([0,1,2,3,4,5,6].includes(opcoes)){
-            break
+        if(![0,1,2,3,4,5,6].includes(opcoes)){
+            window.alert("número inválido!")
+            continue
         }
-        window.alert("número inválido!")
-    }
+    
         
+
         if(opcoes === 1){
             cadastrarPedido();
         }
@@ -44,6 +45,10 @@ function iniciarSistema() {
         if(opcoes === 6){
             gerarResumoJSON();
         }
+        if(opcoes === 0){
+            break
+        }
+    }
     
 }
 // TODO: chamar iniciarSistema() quando a implementação estiver pronta.
