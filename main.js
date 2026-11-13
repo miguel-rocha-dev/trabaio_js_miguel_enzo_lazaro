@@ -24,7 +24,6 @@ function iniciarSistema() {
         window.alert("número inválido!")
     }
         
-
         if(opcoes === 1){
             cadastrarPedido();
         }

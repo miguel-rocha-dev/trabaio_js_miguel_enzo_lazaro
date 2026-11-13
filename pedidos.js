@@ -32,8 +32,8 @@ function listarPedidos() {
         cont++
         console.log(`pedido ${cont}º`)
         console.log(`Código do pedido: ${pedido.codigo}`)
-        console.log(`Nome do cliente: ${pedido.cliente}º`)
-        console.log(`Valor do pedido ${pedido.valor}º`)
+        console.log(`Nome do cliente: ${pedido.cliente}`)
+        console.log(`Valor do pedido ${pedido.valor}`)
         if(pedido.entregue){
             console.log("Pedido entregue!")
         }
