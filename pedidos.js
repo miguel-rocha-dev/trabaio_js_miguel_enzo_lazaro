@@ -7,12 +7,7 @@ let pedidos = [
 
 // Implemente abaixo as operações de gerenciamento dos pedidos.
 function cadastrarPedido() {
-    while(true){
         let codigo = Number(prompt("digite o código do produto que você quer adicionar"))
-        if(codigo%1 != 0){
-            break
-        }
-        window.alert("O número deve ser inteiro!")
         let nomeCliente = prompt("digite o nome do cliente")
         let valorPedido = Number(prompt("Digite o valor do pedido"))
         let pedidoEntregue = false // pedido acabou de ser criado, não tem como já ter sido entregue
@@ -23,8 +18,9 @@ function cadastrarPedido() {
             entregue: pedidoEntregue
         }
         pedidos.push(objeto)
-    }
-    window.alert("Pedido criado com sucesso!")
+
+    window.alert(`Pedido criado com sucesso! ${buscarPedido(objeto.codigo)}`)
+    
 
 
     // TODO: solicitar os dados, validar e adicionar um novo pedido ao array.

@@ -6,45 +6,37 @@ function iniciarSistema() {
     // condicionais e chamadas às funções dos outros arquivos JavaScript.
     // Opções: 1 cadastrar; 2 listar; 3 buscar; 4 entregar;
     // 5 resumo; 6 resumo em JSON; 0 sair.
-    let opcoes = " ";
-        while (opcoes !== "0") {
-        opcoes = prompt(
-        "===== LANCHONETE ===== \n" +
-        "1 - Cadastrar\n" +
-        "2 - listar\n" +
-        "3 - buscar\n" +
-        "4 - Entregar\n" +
-        "5 - Resumo\n" +
-        "6 - Resumo em JSON\n" +
-        "0 - Sair\n\n");
+    let opcoes = 1;
+    while (opcoes !== "0") {
+        opcoes = Number(prompt(
+            "===== LANCHONETE ===== \n" +
+            "1 - Cadastrar\n" +
+            "2 - listar\n" +
+            "3 - buscar\n" +
+            "4 - Entregar\n" +
+            "5 - Resumo\n" +
+            "6 - Resumo em JSON\n" +
+            "0 - Sair\n\n"));
 
-        if(opcoes == 0 || opcoes === 0){
-            break
+        if(opcoes === 1){
+            cadastrarPedido();
         }
-            
-        if(opcoes !== 1 && opcoes !== 2){
-            continue
+        if(opcoes === 2){
+            listarPedidos();
         }
-
-        if(opcoes === "1"){
-            console.log(cadastrarPedido());
+        if(opcoes === 3){
+            buscarPedido(codigo);
         }
-        if(opcoes === "2"){
-            console.log(listarPedidos());
+        if(opcoes === 4){
+            entregarPedido(codigo);
         }
-        if(opcoes === "3"){
-            console.log(buscarPedido(codigo));
+        if(opcoes === 5){
+            exibirResumo();
         }
-        if(opcoes === "4"){
-            console.log(entregarPedido(codigo));
+        if(opcoes === 6){
+            gerarResumoJSON();
         }
-        if(opcoes === "5"){
-            console.log(exibirResumo());
-        }
-        if(opcoes === "6"){
-            console.log(gerarResumoJSON());
-        }
-}
+    }
 }
 // TODO: chamar iniciarSistema() quando a implementação estiver pronta.
-console.log(iniciarSistema);
+iniciarSistema()
