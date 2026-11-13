@@ -17,10 +17,10 @@ function exibirResumo() {
         }
     }
     console.log("=== RESUMO DOS PEDIDOS ===")
-    console.log(`Total pedidos: ${totalPedidos}`)
+    console.log(`Total pedidos: ${pedidos.length}`)
     console.log(`Pedidos entregues: ${entregues}`)
     console.log(`Pedidos pendentes: ${pendentes}`)
-    console.log(`Valor tatal: ${valorTotal}`)
+    console.log(`Valor total: ${valorTotal}`)
     }
 
 function gerarResumoJSON() {
@@ -39,7 +39,7 @@ function gerarResumoJSON() {
         }
     }
     let resumo = {
-        totalPedidos : pedido.length,
+        totalPedidos : pedidos.length,
         entregues : entregues,
         pendentes : pendentes,
         valorTotal : valorTotal
