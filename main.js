@@ -25,9 +25,11 @@ function iniciarSistema() {
             listarPedidos();
         }
         if(opcoes === 3){
+            let codigo = Number(prompt("digite o código do produto para a busca"))
             buscarPedido(codigo);
         }
         if(opcoes === 4){
+            let codigo = Number(prompt("digite o código do produto para a confirmar a entrega"))
             entregarPedido(codigo);
         }
         if(opcoes === 5){
